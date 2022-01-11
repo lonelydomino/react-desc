@@ -4,67 +4,48 @@ import Client from 'shopify-buy'
 const ShopContext = React.createContext()
 
 const client = Client.buildClient({
-    domain: process.env.REACT_APP_SHOPIFY_DOMAIN,
-    storefrontAccessToken: process.env.REACT_APP_SHOPIFY_API
-  });
+  domain: process.env.REACT_APP_SHOPIFY_DOMAIN,
+  storefrontAccessToken: process.env.REACT_APP_SHOPIFY_API,
+})
 
 class ShopProvider extends Component {
+  state = {
+    product: {},
+    products: [],
+    checkout: {},
+    isCartOpen: false,
+    isMenuOpen: false,
+  }
 
-    state = {
-        product: {},
-        products: [],
-        checkout: {},
-        isCartOpen: false,
-        isMenuOpen: false
-    }
-    
-    createCheckout = async () => {
+  createCheckout = async () => {}
 
-    }
-    
-    fetchCheckout = async () => {
+  fetchCheckout = async () => {}
 
-    }
+  addItemtoCheckout = async () => {}
 
-    addItemtoCheckout = async () => {
+  removeLineItem = async (lineItemIdsToRemove) => {}
 
-    }
+  fetchAllProducts = async () => {
+      const products = await client.product.fetchAll()
+      this.setState({ products: products })
+  }
 
-    removeLineItem = async (lineItemIdsToRemove) => {
+  fetchProductsWithHandle = async (handle) => {
+    const product = await client.product.fetchByHandle(handle)
+    this.setState({product: product})
+  }
 
-    }
+  closeCart = () => {}
 
-    fetchAllProducts = async () => {
+  openCart = () => {}
 
-    }
+  openMenu = () => {}
 
-    fetchProductsWithHandle = async (handle) => {
+  closeMenu = () => {}
 
-    }
-
-    closeCart = () => {
-
-    }
-
-    openCart = () => {
-
-    }
-
-    openMenu = () => {
-
-    }
-
-    closeMenu = () => {
-
-    }
-    
-    render() {
-        return (
-            <ShopContext.Provider>
-                {this.props.children}
-            </ShopContext.Provider>
-        )
-    }
+  render() {
+    return <ShopContext.Provider>{this.props.children}</ShopContext.Provider>
+  }
 }
 const ShopConsumer = ShopContext.Consumer
 
