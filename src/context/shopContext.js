@@ -30,11 +30,11 @@ class ShopProvider extends Component {
   createCheckout = async () => {
       const checkout = await client.checkout.create()
       localStorage.setItem("checkout_id", checkout.id)
-      this.setState({checkout: checkout})
+      this.setState({checkout: checkout}) 
   }
 
   fetchCheckout = (checkoutId) => {
-      client.fetch(checkoutId)
+      client.checkout.fetch(checkoutId)
       .then((checkout) => {
           this.setState({checkout: checkout})
       })
@@ -64,7 +64,8 @@ class ShopProvider extends Component {
 
   render() {
     return (
-        <ShopContext.Provider value={{...this.state,
+        <ShopContext.Provider value={{
+            ...this.state,
              fetchAllProducts: this.fetchAllProducts,
              fetchProductsWithHandle: this.fetchProductsWithHandle,
              addItemToCheckout: this.addItemtoCheckout,
