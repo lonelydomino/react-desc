@@ -63,7 +63,20 @@ class ShopProvider extends Component {
   closeMenu = () => {}
 
   render() {
-    return <ShopContext.Provider>{this.props.children}</ShopContext.Provider>
+    return (
+        <ShopContext.Provider value={{...this.state,
+             fetchAllProducts: this.fetchAllProducts,
+             fetchProductsWithHandle: this.fetchProductsWithHandle,
+             addItemToCheckout: this.addItemtoCheckout,
+             removeLineItem: this.removeLineItem,
+             closeCart: this.closeCart,
+             closeMenu: this.closeMenu,
+             openCart: this.openCart,
+             openMenu: this.openMenu
+         }}>
+            {this.props.children}
+        </ShopContext.Provider>
+    )
   }
 }
 const ShopConsumer = ShopContext.Consumer
