@@ -1,10 +1,11 @@
+import Home from './pages/Home'
 
 function App() {
   return (
     <div className="App">
-      DESC Shopify Store
+      <Home />
     </div>
-  );
+  )
 }
 
 export default App;
