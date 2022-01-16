@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 import { ShopContext } from '../context/shopContext'
 
@@ -13,10 +14,10 @@ const Home = () => {
     if (!products) return  <div>Loading...</div>
 
     return (
-        <div>hi
+        <div>
             {
             products.map(product => (
-                <h1 key={product.title}>{product.title}</h1>
+                <Link to={`/products/${product.handle}`} key={product.title}>{product.title}</Link>
             ))
             }
         </div>
