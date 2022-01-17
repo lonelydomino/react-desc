@@ -17,7 +17,7 @@ function App() {
           </Route>
 
         </Switch>
-        <p>Footer</p>
+        <p>Footer placeholder</p>
       </Router>
     </div>
   )
