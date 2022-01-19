@@ -32,9 +32,9 @@ const Cart = () => {
           </DrawerBody>
 
           <DrawerFooter>
-            <Button variant='outline' mr={3} onClick={onClose}>
+            {/* <Button variant='outline' mr={3} onClick={onClose}>
               Cancel
-            </Button>
+            </Button> */}
             <Button colorScheme='blue'>Checkout</Button>
           </DrawerFooter>
         </DrawerContent>
