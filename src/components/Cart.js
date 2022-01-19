@@ -3,6 +3,7 @@ import { ShopContext } from '../context/shopContext'
 
 import {
     Drawer,
+    Button,
     DrawerBody,
     DrawerFooter,
     DrawerHeader,
