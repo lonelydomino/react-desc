@@ -14,12 +14,12 @@ import {
 const Cart = () => {
 
     const { isCartOpen, closeCart, checkout, removeLineItem } = useContext(ShopContext)
-    
+
     return (
         <Drawer
-        isOpen={isOpen}
+        isOpen={isCartOpen}
         placement='right'
-        onClose={onClose}
+        onClose={closeCart}
       >
         <DrawerOverlay />
         <DrawerContent>
