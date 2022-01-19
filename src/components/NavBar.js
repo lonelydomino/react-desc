@@ -12,7 +12,7 @@ const NavBar = () => {
         <Flex backgroundColor="#dcdcdc" flexDir="row" justifyContent="space-between" p="2rem" >
             <Icon w={30} h={30} cursor="pointer" fill="black" as={ MdMenu } />
             <Text w={100}>DESC(Logo placeholder?)</Text>
-            <Icon w={30} h={30} cursor="pointer" fill="black" as={ MdShoppingBasket } />
+            <Icon w={30} h={30} cursor="pointer" fill="black" as={ MdShoppingBasket } onClick={() => openCart()} />
         </Flex>
     )
 }
