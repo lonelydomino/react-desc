@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { ShopContext } from '../context/shopContext'
 
 import {
+    Box,
     Flex,
     Text,
     Grid,
@@ -52,7 +53,12 @@ const Cart = () => {
                         {item.variant.price}
                     </Flex>
                 </Grid>
-            )) : <div>Empty Cart</div> 
+            )) : 
+            <Box h="100%">
+                <Text h="100%" display="flex" flexDir="column" alignItems="center" justifyContent="center">
+                    Your Cart is empty!
+                </Text>
+            </Box> 
             }
           </DrawerBody>
         {
