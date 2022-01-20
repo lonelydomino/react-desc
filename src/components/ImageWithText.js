@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Flex, Button, Text, Image, Heading } from '@chakra-ui/react'
 
-const ImageWithText = ({ reverse }) => {
+const ImageWithText = ({ reverse, image, heading, text }) => {
 
     const reverseSection =  reverse ? 'row-reverse' : 'row'
     
@@ -13,6 +13,12 @@ const ImageWithText = ({ reverse }) => {
                     <Heading>
                         { heading && heading }
                     </Heading>
+                    <Text>
+                        { text && text}
+                    </Text>
+                    <Button w="10rem" backgroundColor="black" color="white" _hover={{opacity: '70%'}}>
+                        Buy Now
+                    </Button>
                 </Flex>
             </Flex>
         </Box>

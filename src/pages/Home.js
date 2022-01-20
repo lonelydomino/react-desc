@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Box, Grid, Text, Image } from '@chakra-ui/react'
 import { ShopContext } from '../context/shopContext'
 import MainBanner from '../components/MainBanner'
+import ImageWithText from '../components/ImageWithText'
 
 const Home = () => {
 
@@ -32,6 +33,10 @@ const Home = () => {
                 ))
                 }
             </Grid>
+            <ImageWithText reverse image="https://cdn.pixabay.com/photo/2015/01/21/17/22/shopping-606993_1280.jpg" heading="Heading"/>
+            <ImageWithText image="https://cdn.pixabay.com/photo/2020/07/11/16/16/jeans-5394561_1280.jpg" heading="Deading"/>
+            <ImageWithText reverse image="https://cdn.pixabay.com/photo/2016/11/19/15/40/clothes-1839935_1280.jpg" heading="Heading"/>
+
         </Box>
     )
 }
