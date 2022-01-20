@@ -23,7 +23,7 @@ const ProductPage = () => {
                 <Heading>{product.title}</Heading>
                 <Text>{product.variants[0].price}</Text>
                 <Text>{product.description}</Text>
-                <Button onClick={() => addItemToCheckout(product.variants[0].id), 1}>Add To Cart</Button>
+                <Button onClick={() => addItemToCheckout(product.variants[0].id, 1)}>Add To Cart</Button>
             </Box>
         </Box>
     )
