@@ -5,6 +5,7 @@ import { useContext } from 'react'
 import { MdMenu, MdShoppingBasket } from 'react-icons/md'
 import { Link } from 'react-router-dom'
 
+
 const NavBar = () => {
 
     const { openCart, openMenu, checkout } = useContext(ShopContext)
