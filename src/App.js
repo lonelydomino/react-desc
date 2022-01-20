@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Cart from './components/Cart';
 import Footer from './components/Footer';
+import MainBanner from './components/MainBanner';
 import NavBar from './components/NavBar';
 import NavMenu from './components/NavMenu';
 import Home from './pages/Home'
@@ -14,6 +15,7 @@ function App() {
         <NavBar/>
         <Cart />
         <NavMenu/>
+        <MainBanner />
         <Switch>
           <Route path="/products/:handle">
             <ProductPage />
