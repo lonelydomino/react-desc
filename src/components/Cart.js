@@ -8,6 +8,7 @@ import {
     Drawer,
     Button,
     Image,
+    Link,
     DrawerBody,
     DrawerFooter,
     DrawerHeader,
@@ -21,6 +22,7 @@ const Cart = () => {
 
     const { isCartOpen, closeCart, checkout, removeLineItem } = useContext(ShopContext)
 
+    console.log(checkout)
     return (
         <Drawer
         isOpen={isCartOpen}
@@ -37,7 +39,7 @@ const Cart = () => {
             checkout.lineItems && checkout.lineItems.map(item => (
                 <Grid templateColumns="repeat(4, 1fr)" gap={1} key={item.id}>
                     <Flex alignItems="center" justifyContent="center">
-                        <CloseIcon cursor="pointer" onClick={() => removeLineItem()}/>
+                        <CloseIcon cursor="pointer" onClick={() => removeLineItem(item.id)}/>
                     </Flex>
                     <Flex alignItems="center" justifyContent="center">
                         <Image src={item.variant.image.src}/>
@@ -56,7 +58,7 @@ const Cart = () => {
             {/* <Button variant='outline' mr={3} onClick={onClose}>
               Cancel
             </Button> */}
-            <Button colorScheme='blue'>Checkout</Button>
+            <Link w="100%" href={checkout.webUrl}><Button w="100%" colorScheme='blue'>Checkout</Button></Link>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
