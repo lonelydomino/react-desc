@@ -11,7 +11,7 @@ const NavBar = () => {
 
     return (
         <Flex backgroundColor="#dcdcdc" flexDir="row" justifyContent="space-between" p="2rem" >
-            <Icon w={30} h={30} cursor="pointer" fill="black" as={ MdMenu } />
+            <Icon onClick={() => openMenu()} w={30} h={30} cursor="pointer" fill="black" as={ MdMenu } />
             <Link to="/">
                 <Text w={100}>DESC(Logo placeholder?)</Text>
             </Link>
