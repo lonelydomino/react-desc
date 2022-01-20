@@ -1,6 +1,7 @@
-import React from 'react'
+import React,{ useContext } from 'react'
 import { ShopContext } from '../context/shopContext'
 import {
+    VStack,
     Box,
     Flex,
     Text,
