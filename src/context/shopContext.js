@@ -79,7 +79,7 @@ class ShopProvider extends Component {
   }
 
   openMenu = () => {
-    this.setState({ isMenuOpen: false})
+    this.setState({ isMenuOpen: true})
   }
 
   closeMenu = () => {
