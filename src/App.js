@@ -15,7 +15,7 @@ function App() {
         <NavBar/>
         <Cart />
         <NavMenu/>
-        <MainBanner />
+
         <Switch>
           <Route path="/products/:handle">
             <ProductPage />
