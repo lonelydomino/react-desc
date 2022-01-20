@@ -20,10 +20,8 @@ class ShopProvider extends Component {
   componentDidMount() {
       
       if(localStorage.checkout_id){
-          debugger
         this.fetchCheckout(localStorage.checkout_id)
       } else {
-          debugger
         this.createCheckout()
       }
   }
@@ -37,10 +35,8 @@ class ShopProvider extends Component {
   }
 
   fetchCheckout = (checkoutId) => {
-      debugger
       client.checkout.fetch(checkoutId)
       .then((checkout) => {
-          debugger
           this.setState({checkout: checkout})
       })
   }
@@ -53,7 +49,6 @@ class ShopProvider extends Component {
           quantity: parseInt(quantity, 10)
         }
     ]
-    debugger
     const checkout = await client.checkout.addLineItems(this.state.checkout.id, lineItemsToAdd)
     this.setState({ checkout: checkout})
 

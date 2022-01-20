@@ -2,8 +2,12 @@ import React, { useContext } from 'react'
 import { ShopContext } from '../context/shopContext'
 
 import {
+    Flex,
+    Text,
+    Grid,
     Drawer,
     Button,
+    Image,
     DrawerBody,
     DrawerFooter,
     DrawerHeader,
@@ -11,6 +15,7 @@ import {
     DrawerContent,
     DrawerCloseButton,
   } from '@chakra-ui/react'
+import { CloseIcon } from '@chakra-ui/icons'
 
 const Cart = () => {
 
@@ -28,7 +33,23 @@ const Cart = () => {
           <DrawerHeader>Your Shopping Cart</DrawerHeader>
 
           <DrawerBody>
-            This is your cart
+            {
+            checkout.lineItems && checkout.lineItems.map(item => (
+                <Grid templateColumns="repeat(4, 1fr)" gap={1} key={item.id}>
+                    <Flex alignItems="center" justifyContent="center">
+                        <CloseIcon cursor="pointer" onClick={() => removeLineItem()}/>
+                    </Flex>
+                    <Flex alignItems="center" justifyContent="center">
+                        <Image src={item.variant.image.src}/>
+                    </Flex>
+                    <Flex alignItems="center" justifyContent="center">
+                        {item.title}
+                    </Flex>
+                    <Flex alignItems="center" justifyContent="center">
+                        {item.variant.price}
+                    </Flex>
+                </Grid>
+            ))}
           </DrawerBody>
 
           <DrawerFooter>
