@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Grid, Box, Text, Image, VStack, Center } from '@chakra-ui/react'
 const Footer = () => {
     return (
-        <Box backgroundColor="gray.500">
+        <Box backgroundColor="black">
             <Grid templateColumns={["repeat(1, 1fr)", "repeat(3, 1fr)"]} color="white" fontWeight="bold">
                 <Center p="2rem" alignItems="center" justifyContent="center">
                     <Image alignItems="center" boxSize="200px" borderRadius="full" src="https://cdn.pixabay.com/photo/2016/11/22/19/08/hangers-1850082_1280.jpg" />

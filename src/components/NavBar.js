@@ -11,13 +11,13 @@ const NavBar = () => {
     const { openCart, openMenu, checkout } = useContext(ShopContext)
 
     return (
-        <Flex backgroundColor="#dcdcdc" flexDir="row" alignItems="center" justifyContent="space-between" p="2rem" >
-            <Icon onClick={() => openMenu()} w={30} h={30} cursor="pointer" fill="black" as={ MdMenu } />
+        <Flex backgroundColor="black" flexDir="row" alignItems="center" justifyContent="space-between" p="2rem" >
+            <Icon onClick={() => openMenu()} w={30} h={30} cursor="pointer" fill="white" as={ MdMenu } />
             <Link to="/">
-                <Text w={100}>DESC(Logo placeholder?)</Text>
+                <Text color="white" fontWeight={150} w={100}>DESC Frontier</Text>
             </Link>
             <Box>
-                <Icon w={30} h={30} cursor="pointer" fill="black" as={ MdShoppingBasket } onClick={() => openCart()} />
+                <Icon w={30} h={30} cursor="pointer" fill="white" as={ MdShoppingBasket } onClick={() => openCart()} />
                 <Badge backgroundColor="#FF38BD" borderRadius="50%">{checkout.lineItems?.length}</Badge>
             </Box>
         </Flex>
