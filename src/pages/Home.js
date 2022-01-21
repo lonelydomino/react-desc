@@ -21,10 +21,10 @@ const Home = () => {
     return (
         <Box>
             <MainBanner />
-            <ImageWithText reverse image="https://cdn.pixabay.com/photo/2015/01/21/17/22/shopping-606993_1280.jpg" heading="Heading" text={placeholderText}/>
-            <ImageWithText image="https://cdn.pixabay.com/photo/2020/07/11/16/16/jeans-5394561_1280.jpg" heading="Heading" text={placeholderText}/>
-            <ImageWithText reverse image="https://cdn.pixabay.com/photo/2016/11/19/15/40/clothes-1839935_1280.jpg" heading="Heading" text={placeholderText}/>
-            <Grid templateColumns="repeat(3, 1fr)">
+            <ImageWithText reverse image="https://cdn.pixabay.com/photo/2015/01/21/17/22/shopping-606993_1280.jpg" heading="What is DESC?" text={placeholderText} buttonText="Learn More" />
+            <ImageWithText image="https://cdn.pixabay.com/photo/2020/07/11/16/16/jeans-5394561_1280.jpg" heading="Heading" text={placeholderText} buttonText="Donate"/>
+            <ImageWithText reverse image="https://cdn.pixabay.com/photo/2016/11/19/15/40/clothes-1839935_1280.jpg" heading="Heading" text={placeholderText} buttonText="Contact Us"/>
+            {/* <Grid templateColumns="repeat(3, 1fr)">
                 {
                 products.map(product => ( 
                     <Link to={`/products/${product.handle}`} key={product.title}>
@@ -36,7 +36,7 @@ const Home = () => {
                 </Link>
                 ))
                 }
-            </Grid>
+            </Grid> */}
             
 
         </Box>
