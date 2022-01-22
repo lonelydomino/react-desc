@@ -1,6 +1,6 @@
 import React from 'react'
 import { ShopContext } from '../context/shopContext'
-import { Flex, Box, Grid, Text, Image, Icon, Badge } from '@chakra-ui/react'
+import { Flex, Box, Text, Icon, Badge } from '@chakra-ui/react'
 import { useContext } from 'react'
 import { MdMenu, MdShoppingBasket } from 'react-icons/md'
 import { Link } from 'react-router-dom'
