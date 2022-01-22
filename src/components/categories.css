@@ -1,0 +1,31 @@
+.outer{
+    display: flex;
+    background-color: #CBD5E0;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .content {
+    border-radius: 50%;
+    color:white;
+    width: 250px;
+    height: 250px;
+    padding: 20px;
+    margin: 10px;
+    position:relative;
+  }
+  .category-image {
+    border-radius: 50%;
+    width: 13rem;
+    height: 13rem;
+    object-fit: cover;
+  }
+  .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    font-weight: 600;
+  }

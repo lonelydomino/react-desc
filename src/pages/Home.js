@@ -4,6 +4,7 @@ import { Box, Grid, Text, Image } from '@chakra-ui/react'
 import { ShopContext } from '../context/shopContext'
 import MainBanner from '../components/MainBanner'
 import ImageWithText from '../components/ImageWithText'
+import Categories from '../components/Categories'
 
 
 const Home = () => {
@@ -37,7 +38,7 @@ const Home = () => {
                 ))
                 }
             </Grid> */}
-            
+            <Categories />
 
         </Box>
     )
