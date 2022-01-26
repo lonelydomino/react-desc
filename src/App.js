@@ -5,7 +5,7 @@ import NavBar from './components/NavBar';
 import NavMenu from './components/NavMenu';
 import Home from './pages/Home'
 import ProductPage from './pages/ProductPage';
-
+import Results from './pages/Results'
 
 function App() {
   return (
@@ -18,6 +18,9 @@ function App() {
         <Switch>
           <Route path="/products/:handle">
             <ProductPage />
+          </Route>
+          <Route path="/results">
+            <Results />
           </Route>
           <Route path="/">
             <Home />
